@@ -9,7 +9,7 @@ import { Product } from './product.model';
 })
 export class ProductService {
 
-  readonly baseURL = 'http://localhost:3000/api';
+  readonly baseURL = 'https://product-api-new.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
