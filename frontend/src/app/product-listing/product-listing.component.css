@@ -1,0 +1,15 @@
+.action{
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+input[type="button"] {
+    border-radius: 0;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    border-radius: 3px;
+}

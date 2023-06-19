@@ -1,0 +1,38 @@
+<p-toast position="bottom-center" [showTransitionOptions]="'3ms'" [hideTransitionOptions]="'3ms'"></p-toast>
+<div class="col-md-12 col-12 d-flex justify-content-center">
+  <input type="button" value="Add Product" (click)="addProduct()" />
+</div>
+<div class="container mt-5">
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Action</th>
+          <th scope="col">SKU</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Images</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredProduct;let i=index">
+          <th scope="row">{{i+1}}</th>
+          <td class="action">
+            <a (click)="editProduct(item.id)"  title="Edit Products">
+              <i class="fa fa-pencil-square-o"></i>
+            </a>
+            <a class="ml-2" (click)="deleteProductConfirmation(item)" title="Delete Products">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </td>
+          <td>{{item.sku}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.images}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p-confirmDialog header="Delete Confirmation" icon="pi pi-info-circle"></p-confirmDialog>
